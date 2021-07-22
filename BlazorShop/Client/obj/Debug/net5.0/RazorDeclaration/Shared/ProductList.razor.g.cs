@@ -96,6 +96,36 @@ using BlazorShop.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 28 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\ProductList.razor"
+       
+    List<Product> products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            CategoryId = 1,
+            Title = "The Hitchcker's guide tot he galaxy",
+            Description = "The hitchhiker's Guide to the Galaxy (sometimes referred to as H) is comedy science fiction series",
+            Image = "https://upload.wikimedia.org/wikipedia/en/b/bd/H2G2_UK_front_cover.jpg",
+            Price = 9.99m,
+            OriginalPrice = 19.99m
+        },
+        new Product
+        {
+            Id = 2,
+            CategoryId = 3,
+            Title = "Half-Life 2",
+            Description = "Half-life 2 is a 2004 first person shooter game developed an published by value.",
+            Image = "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg",
+            Price = 8.99m,
+            OriginalPrice = 29.99m
+        }
+    };
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
