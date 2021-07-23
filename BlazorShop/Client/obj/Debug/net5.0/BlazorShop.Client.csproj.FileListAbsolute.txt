@@ -636,3 +636,5 @@ D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\BlazorShop.Client.csproj
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\BlazorShop.Client.dll
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\ref\BlazorShop.Client.dll
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\BlazorShop.Client.pdb
+D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\RazorDeclaration\Pages\ProductDetails.razor.g.cs
+D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\Razor\Pages\ProductDetails.razor.g.cs
