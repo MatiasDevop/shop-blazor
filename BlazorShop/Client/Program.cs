@@ -1,3 +1,4 @@
+using BlazorShop.Client.Services.CategoryService;
 using BlazorShop.Client.Services.ProductService;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,7 @@ namespace BlazorShop.Client
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             // here add if you wanna use DI
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
             await builder.Build().RunAsync();

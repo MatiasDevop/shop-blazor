@@ -89,6 +89,20 @@ using BlazorShop.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.ProductService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.CategoryService;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998

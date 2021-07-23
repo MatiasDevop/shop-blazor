@@ -89,6 +89,20 @@ using BlazorShop.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.ProductService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.CategoryService;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -97,7 +111,7 @@ using BlazorShop.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\NavMenu.razor"
+#line 29 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -108,9 +122,15 @@ using BlazorShop.Shared;
         collapseNavMenu = !collapseNavMenu;
     }
 
+    protected override void OnInitialized()
+    {
+        CategoryService.LoadCategories();
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICategoryService CategoryService { get; set; }
     }
 }
 #pragma warning restore 1591

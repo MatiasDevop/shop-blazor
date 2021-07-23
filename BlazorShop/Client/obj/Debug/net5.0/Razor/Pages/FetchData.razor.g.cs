@@ -80,6 +80,20 @@ using BlazorShop.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.ProductService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using BlazorShop.Client.Services.CategoryService;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\FetchData.razor"
 using BlazorShop.Shared;
 
