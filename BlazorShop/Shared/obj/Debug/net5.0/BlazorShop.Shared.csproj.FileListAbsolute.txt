@@ -2,7 +2,6 @@ D:\Blazor\BlazorShop\BlazorShop\Shared\bin\Debug\net5.0\BlazorShop.Shared.deps.j
 D:\Blazor\BlazorShop\BlazorShop\Shared\bin\Debug\net5.0\BlazorShop.Shared.dll
 D:\Blazor\BlazorShop\BlazorShop\Shared\bin\Debug\net5.0\ref\BlazorShop.Shared.dll
 D:\Blazor\BlazorShop\BlazorShop\Shared\bin\Debug\net5.0\BlazorShop.Shared.pdb
-D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.csprojAssemblyReference.cache
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.GeneratedMSBuildEditorConfig.editorconfig
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.AssemblyInfoInputs.cache
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.AssemblyInfo.cs

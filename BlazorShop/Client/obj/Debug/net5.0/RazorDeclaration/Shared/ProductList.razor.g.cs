@@ -117,9 +117,9 @@ using BlazorShop.Client.Services.CategoryService;
     [Parameter]
     public int? CategoryId { get; set; } = null;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        ProductService.LoadProducts();
+       await ProductService.LoadProducts();
     }
 
 #line default

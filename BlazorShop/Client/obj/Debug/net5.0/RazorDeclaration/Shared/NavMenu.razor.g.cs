@@ -122,9 +122,9 @@ using BlazorShop.Client.Services.CategoryService;
         collapseNavMenu = !collapseNavMenu;
     }
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        CategoryService.LoadCategories();
+        await CategoryService.LoadCategories();
     }
 
 #line default
