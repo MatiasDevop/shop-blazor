@@ -9,3 +9,4 @@ D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.csproj
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.dll
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\ref\BlazorShop.Shared.dll
 D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.pdb
+D:\Blazor\BlazorShop\BlazorShop\Shared\obj\Debug\net5.0\BlazorShop.Shared.csprojAssemblyReference.cache

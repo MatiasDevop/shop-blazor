@@ -122,11 +122,7 @@ using BlazorShop.Client.Services.CategoryService;
 
     protected override async Task OnInitializedAsync()
     {
-        //if (ProductService.Products == null || ProductService.Products.Count == 0)
-        //{
-        //    ProductService.LoadProducts();
-        //}
-        product = await ProductService.GetProduct(Id);//.//FirstOrDefault(p => p.Id == Int32.Parse(Id));
+        product = await ProductService.GetProduct(Id);
     }
 
 #line default
