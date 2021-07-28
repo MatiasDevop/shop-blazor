@@ -111,7 +111,7 @@ using BlazorShop.Client.Services.CategoryService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\ProductList.razor"
+#line 28 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\ProductList.razor"
        
 
     //[Parameter]
@@ -126,6 +126,21 @@ using BlazorShop.Client.Services.CategoryService;
     public void Dispose()
     {
         ProductService.OnChange -= StateHasChanged;
+    }
+
+    private string GetPriceText(Product product)
+    {
+        var variants = product.Variants;
+        if (variants.Count == 0)
+        {
+            return string.Empty;
+        }
+        else if (variants.Count == 1)
+        {
+            return $"${variants[0].Price}";
+        }
+        decimal minPrice = variants.Min(v => v.Price);
+        return $"Starting at ${minPrice}";
     }
 
 #line default
