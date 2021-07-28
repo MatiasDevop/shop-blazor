@@ -4,14 +4,16 @@ using BlazorShop.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorShop.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210728082159_ProductDateFix")]
+    partial class ProductDateFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,53 +62,6 @@ namespace BlazorShop.Server.Migrations
                             Icon = "aperture",
                             Name = "Video Games",
                             Url = "video-games"
-                        });
-                });
-
-            modelBuilder.Entity("BlazorShop.Shared.Edition", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Editions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Paperback"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "E-Book"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Audiobook"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "PC"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "PlayStation"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Xbox"
                         });
                 });
 
@@ -231,76 +186,6 @@ namespace BlazorShop.Server.Migrations
                             OriginalPrice = 400m,
                             Price = 74.74m,
                             Title = "Super Nintendo Entertaimen System"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CategoryId = 3,
-                            DateCreated = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Day of the Tentacle , also known as Manica Mansion II",
-                            Image = "https://upload.wikimedia.org/wikipedia/en/7/79/Day_the_Tentacle_artwork.jpg",
-                            IsDeleted = false,
-                            IsPublic = false,
-                            OriginalPrice = 0m,
-                            Price = 14.74m,
-                            Title = "Day of the Tentacle"
-                        });
-                });
-
-            modelBuilder.Entity("EditionProduct", b =>
-                {
-                    b.Property<int>("EditionsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EditionsId", "ProductsId");
-
-                    b.HasIndex("ProductsId");
-
-                    b.ToTable("EditionProduct");
-
-                    b.HasData(
-                        new
-                        {
-                            EditionsId = 1,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 2,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 3,
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            EditionsId = 1,
-                            ProductsId = 2
-                        },
-                        new
-                        {
-                            EditionsId = 2,
-                            ProductsId = 2
-                        },
-                        new
-                        {
-                            EditionsId = 4,
-                            ProductsId = 7
-                        },
-                        new
-                        {
-                            EditionsId = 5,
-                            ProductsId = 7
-                        },
-                        new
-                        {
-                            EditionsId = 6,
-                            ProductsId = 7
                         });
                 });
 
@@ -313,21 +198,6 @@ namespace BlazorShop.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("EditionProduct", b =>
-                {
-                    b.HasOne("BlazorShop.Shared.Edition", null)
-                        .WithMany()
-                        .HasForeignKey("EditionsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlazorShop.Shared.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
