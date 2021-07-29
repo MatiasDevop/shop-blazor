@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorShop.Client.Pages
+namespace BlazorShop.Client.Shared
 {
     #line hidden
     using System;
@@ -131,8 +131,7 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class TopMenu : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -140,18 +139,30 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Counter.razor"
-       
-    private int currentCount = 0;
+#line 11 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\TopMenu.razor"
+               
 
-    private void IncrementCount()
+    protected override void OnInitialized()
     {
-        currentCount++;
+        CartService.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= StateHasChanged;
+    }
+
+    private int GetProductCount()
+    {
+        var cart = LocalStorage.GetItem<List<ProductVariant>>("cart");
+        return cart != null ? cart.Count : 0;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICartService CartService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISyncLocalStorageService LocalStorage { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -650,3 +650,5 @@ D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\it+LxVWR.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\gZreMVVN.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\RB+LM3av.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\7OoiDKe5.gz
+D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\RazorDeclaration\Shared\TopMenu.razor.g.cs
+D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\Razor\Shared\TopMenu.razor.g.cs

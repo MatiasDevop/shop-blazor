@@ -105,20 +105,27 @@ using BlazorShop.Client.Services.CategoryService;
 #nullable disable
 #nullable restore
 #line 14 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.LocalStorage;
+using BlazorShop.Client.Services.CartService;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 15 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.Toast;
+using Blazored.LocalStorage;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 17 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
 using Blazored.Toast.Services;
 
 #line default
@@ -133,7 +140,7 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
+#line 42 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
        
 
     private Product product = new Product();
@@ -161,15 +168,7 @@ using Blazored.Toast.Services;
 
     private async Task AddToCart()
     {
-        var cart = await LocalStorage.GetItemAsync<List<ProductVariant>>("cart");
-        if (cart == null)
-        {
-            cart = new List<ProductVariant>();
-        }
-        cart.Add(GetSelectedVariant());
-        await LocalStorage.SetItemAsync("cart", cart);
-        ToastService.ShowSuccess(product.Title, "Added to cart:");
-
+        await CartService.AddToCart(GetSelectedVariant());
     }
 
 #line default
@@ -177,6 +176,7 @@ using Blazored.Toast.Services;
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IToastService ToastService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICartService CartService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
     }
 }
