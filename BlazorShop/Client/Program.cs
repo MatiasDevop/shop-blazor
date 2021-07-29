@@ -1,3 +1,5 @@
+using Blazored.LocalStorage;
+using Blazored.Toast;
 using BlazorShop.Client.Services.CategoryService;
 using BlazorShop.Client.Services.ProductService;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -23,7 +25,8 @@ namespace BlazorShop.Client
             // here add if you wanna use DI
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+            builder.Services.AddBlazoredLocalStorage();
+            builder.Services.AddBlazoredToast();
 
             await builder.Build().RunAsync();
         }

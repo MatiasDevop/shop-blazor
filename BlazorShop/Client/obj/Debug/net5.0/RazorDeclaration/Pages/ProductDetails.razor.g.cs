@@ -103,6 +103,27 @@ using BlazorShop.Client.Services.CategoryService;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/product/{id:int}")]
     public partial class ProductDetails : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,7 +133,7 @@ using BlazorShop.Client.Services.CategoryService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
+#line 41 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
        
 
     private Product product = new Product();
@@ -138,9 +159,24 @@ using BlazorShop.Client.Services.CategoryService;
         return variant;
     }
 
+    private async Task AddToCart()
+    {
+        var cart = await LocalStorage.GetItemAsync<List<ProductVariant>>("cart");
+        if (cart == null)
+        {
+            cart = new List<ProductVariant>();
+        }
+        cart.Add(GetSelectedVariant());
+        await LocalStorage.SetItemAsync("cart", cart);
+        ToastService.ShowSuccess(product.Title, "Added to cart:");
+
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IToastService ToastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
     }
 }

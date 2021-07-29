@@ -100,6 +100,27 @@ using BlazorShop.Client.Services.CategoryService;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/{categoryurl}")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
