@@ -140,12 +140,18 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Cart.razor"
+#line 31 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Cart.razor"
        
     List<CartItem> cartItems = new List<CartItem>();
 
     protected override async Task OnInitializedAsync()
     {
+        cartItems = await CartService.GetCartItems();
+    }
+
+    private async Task DeleteItem(CartItem item)
+    {
+        await CartService.DeleteItem(item);
         cartItems = await CartService.GetCartItems();
     }
 
