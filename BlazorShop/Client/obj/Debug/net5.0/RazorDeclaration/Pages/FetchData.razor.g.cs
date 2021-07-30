@@ -105,27 +105,34 @@ using BlazorShop.Client.Services.CartService;
 #nullable disable
 #nullable restore
 #line 15 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.LocalStorage;
+using BlazorShop.Client.Services.StatsService;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.Toast;
+using Blazored.LocalStorage;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.Toast.Services;
+using Blazored.Toast;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 19 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default

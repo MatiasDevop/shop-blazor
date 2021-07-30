@@ -19,6 +19,7 @@ namespace BlazorShop.Server.Data
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Edition> Editions { get; set; }
+        public DbSet<Stats> stats { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -112,27 +112,34 @@ using BlazorShop.Client.Services.CartService;
 #nullable disable
 #nullable restore
 #line 15 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.LocalStorage;
+using BlazorShop.Client.Services.StatsService;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 16 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.Toast;
+using Blazored.LocalStorage;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 17 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
-using Blazored.Toast.Services;
+using Blazored.Toast;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 19 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
@@ -148,7 +155,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Index.razor"
+#line 28 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Index.razor"
       
 
     [Parameter]
@@ -168,12 +175,16 @@ using Microsoft.AspNetCore.Components.Authorization;
         {
             category = null;
         }
+
+        await StatsService.IncrementVisits();
+        await StatsService.GetVisits();
     }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISyncLocalStorageService LocalStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStatsService StatsService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICategoryService CategoryService { get; set; }
     }
