@@ -10,5 +10,6 @@ namespace BlazorShop.Client.Services.CartService
     {
         event Action OnChange;
         Task AddToCart(ProductVariant productVariant);
+        Task<List<CartItem>> GetCartItems();
     }
 }
