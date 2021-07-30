@@ -38,7 +38,6 @@
           "Microsoft.AspNetCore.Authentication": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.OAuth": "5.0.0.0",
           "Microsoft.AspNetCore.Authorization.Policy": "5.0.0.0",
-          "Microsoft.AspNetCore.Components.Authorization.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Components.Server": "5.0.0.0",
           "Microsoft.AspNetCore.Connections.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.CookiePolicy": "5.0.0.0",
@@ -315,7 +314,7 @@
       },
       "Blazored.LocalStorage/4.1.2": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "5.0.5",
+          "Microsoft.AspNetCore.Components": "5.0.8",
           "Microsoft.AspNetCore.Components.Web": "5.0.5",
           "bunit.core": "1.1.5"
         },
@@ -331,7 +330,7 @@
       },
       "Blazored.Toast/3.1.2": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "5.0.5",
+          "Microsoft.AspNetCore.Components": "5.0.8",
           "Microsoft.AspNetCore.Components.Web": "5.0.5",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
@@ -347,8 +346,8 @@
       },
       "bunit.core/1.1.5": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "5.0.5",
-          "Microsoft.AspNetCore.Components.Authorization": "5.0.0",
+          "Microsoft.AspNetCore.Components": "5.0.8",
+          "Microsoft.AspNetCore.Components.Authorization": "5.0.8",
           "Microsoft.AspNetCore.Components.Web": "5.0.5",
           "Microsoft.Extensions.Logging": "5.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
@@ -371,47 +370,56 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/5.0.5": {
+      "Microsoft.AspNetCore.Authorization/5.0.8": {
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "5.0.5",
+          "Microsoft.AspNetCore.Metadata": "5.0.8",
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
           "Microsoft.Extensions.Options": "5.0.0"
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.521.16708"
+            "fileVersion": "5.0.821.31805"
           }
         },
         "compile": {
           "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components/5.0.5": {
+      "Microsoft.AspNetCore.Components/5.0.8": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "5.0.5",
-          "Microsoft.AspNetCore.Components.Analyzers": "5.0.5"
+          "Microsoft.AspNetCore.Authorization": "5.0.8",
+          "Microsoft.AspNetCore.Components.Analyzers": "5.0.8"
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Components.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.521.16708"
+            "fileVersion": "5.0.821.31805"
           }
         },
         "compile": {
           "lib/net5.0/Microsoft.AspNetCore.Components.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/5.0.5": {},
-      "Microsoft.AspNetCore.Components.Authorization/5.0.0": {
+      "Microsoft.AspNetCore.Components.Analyzers/5.0.8": {},
+      "Microsoft.AspNetCore.Components.Authorization/5.0.8": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "5.0.5",
-          "Microsoft.AspNetCore.Components": "5.0.5"
+          "Microsoft.AspNetCore.Authorization": "5.0.8",
+          "Microsoft.AspNetCore.Components": "5.0.8"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Authorization.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.821.31805"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
         }
       },
       "Microsoft.AspNetCore.Components.Forms/5.0.5": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "5.0.5"
+          "Microsoft.AspNetCore.Components": "5.0.8"
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -425,7 +433,7 @@
       },
       "Microsoft.AspNetCore.Components.Web/5.0.5": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "5.0.5",
+          "Microsoft.AspNetCore.Components": "5.0.8",
           "Microsoft.AspNetCore.Components.Forms": "5.0.5",
           "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.JSInterop": "5.0.5",
@@ -470,11 +478,11 @@
           "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Metadata/5.0.5": {
+      "Microsoft.AspNetCore.Metadata/5.0.8": {
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.521.16708"
+            "fileVersion": "5.0.821.31805"
           }
         },
         "compile": {
@@ -1551,6 +1559,7 @@
           "BlazorShop.Shared": "1.0.0",
           "Blazored.LocalStorage": "4.1.2",
           "Blazored.Toast": "3.1.2",
+          "Microsoft.AspNetCore.Components.Authorization": "5.0.8",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.2",
           "System.Net.Http.Json": "5.0.0"
         },
@@ -1608,12 +1617,6 @@
       "Microsoft.AspNetCore.Authorization.Policy/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Authorization.Policy.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.AspNetCore.Components.Authorization.Reference/5.0.0.0": {
-        "compile": {
-          "Microsoft.AspNetCore.Components.Authorization.dll": {}
         },
         "compileOnly": true
       },
@@ -3249,33 +3252,33 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authorization/5.0.5": {
+    "Microsoft.AspNetCore.Authorization/5.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pQSx1MrLJlKwlEclliO9aUwKxe9EKI2Mff39VE1t5VYOjqsMyI2ujWKGI6XAUsnmC0Bta67GZ1k4DbQZd7tJKg==",
-      "path": "microsoft.aspnetcore.authorization/5.0.5",
-      "hashPath": "microsoft.aspnetcore.authorization.5.0.5.nupkg.sha512"
+      "sha512": "sha512-7PKGjQUmMhlGFTx+HZxR1WO3pBceOeMtCRdZ8ERHMulmX8UecHSPnoo28AYrt6aBrYy4fsNkYSjwZlUQxp6DAw==",
+      "path": "microsoft.aspnetcore.authorization/5.0.8",
+      "hashPath": "microsoft.aspnetcore.authorization.5.0.8.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components/5.0.5": {
+    "Microsoft.AspNetCore.Components/5.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Hmx7CyjqhmcMKUjLAOS0S2cJaJ+jO2Tw0nHNIKVIkzU/5a3vvtT39x/kOXlwJiTK6+nWHlZ7HzL2TaTkeNON/w==",
-      "path": "microsoft.aspnetcore.components/5.0.5",
-      "hashPath": "microsoft.aspnetcore.components.5.0.5.nupkg.sha512"
+      "sha512": "sha512-otNeUv8Mg+S2mjVjM9eGEdZbIH19fwk9FY7LF9x40+nslRCGLVdCk+BdhTuTRnnMFW4teUatkeTar38znu4jyg==",
+      "path": "microsoft.aspnetcore.components/5.0.8",
+      "hashPath": "microsoft.aspnetcore.components.5.0.8.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.Analyzers/5.0.5": {
+    "Microsoft.AspNetCore.Components.Analyzers/5.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-psHOvHEWJC5BDNCAp7BJQMhv68mbhZMPFArf4RArrSYzIYMxQPDS/DgnAs3getHzQhHqEkrAhfEa7YXyW+bZSw==",
-      "path": "microsoft.aspnetcore.components.analyzers/5.0.5",
-      "hashPath": "microsoft.aspnetcore.components.analyzers.5.0.5.nupkg.sha512"
+      "sha512": "sha512-9WFZ8biO7XKl9tCKkon4HN1wKGvHYLHVMmh/s1V31+CE0hO05l3Sk0acdJOVJg96upzFjaLnzxoIDPlT7f3BrA==",
+      "path": "microsoft.aspnetcore.components.analyzers/5.0.8",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.5.0.8.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.Authorization/5.0.0": {
+    "Microsoft.AspNetCore.Components.Authorization/5.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I++r4RdziNB9HeQbkHQvzg2N0rX4dSmA1105OnR5xMKZKL8E7TOKR+Mwf45uXgKvxYb08otPrZWTx1M5rmL/8g==",
-      "path": "microsoft.aspnetcore.components.authorization/5.0.0",
-      "hashPath": "microsoft.aspnetcore.components.authorization.5.0.0.nupkg.sha512"
+      "sha512": "sha512-lAAumyej05CykbHe8q5lPnPhSIv9JzjF6rnvu6TKCfR8pD6Y6vwdr82q0ZlDDQ1MFng3RNZPs5EaEypzRs8lhg==",
+      "path": "microsoft.aspnetcore.components.authorization/5.0.8",
+      "hashPath": "microsoft.aspnetcore.components.authorization.5.0.8.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.Forms/5.0.5": {
       "type": "package",
@@ -3305,12 +3308,12 @@
       "path": "microsoft.aspnetcore.components.webassembly.server/5.0.2",
       "hashPath": "microsoft.aspnetcore.components.webassembly.server.5.0.2.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Metadata/5.0.5": {
+    "Microsoft.AspNetCore.Metadata/5.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SD+puPsFLQXWwzoMiXv8lpFGHyZg0gKp3OP2EXg3eRlwJQOMaUGMIqbCdfHGR4MBaUZtqY/tU68H1bzb6+FSxA==",
-      "path": "microsoft.aspnetcore.metadata/5.0.5",
-      "hashPath": "microsoft.aspnetcore.metadata.5.0.5.nupkg.sha512"
+      "sha512": "sha512-+H9/+YSo2LIeBfhucnXm+cx/u+UciDDG3Sm4rceBQYxtE1d5Yt9AGD16tDAZtJnLheV/LQIWvrIl4gMH/2UmBA==",
+      "path": "microsoft.aspnetcore.metadata/5.0.8",
+      "hashPath": "microsoft.aspnetcore.metadata.5.0.8.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -4095,11 +4098,6 @@
       "sha512": ""
     },
     "Microsoft.AspNetCore.Authorization.Policy/5.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.AspNetCore.Components.Authorization.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

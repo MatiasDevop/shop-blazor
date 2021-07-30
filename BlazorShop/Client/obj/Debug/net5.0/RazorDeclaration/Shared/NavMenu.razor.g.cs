@@ -131,6 +131,13 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -139,7 +146,7 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\NavMenu.razor"
+#line 47 "D:\Blazor\BlazorShop\BlazorShop\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -155,9 +162,17 @@ using Blazored.Toast.Services;
         await CategoryService.LoadCategories();
     }
 
+    private async void Logout()
+    { 
+        await LocalStorage.RemoveItemAsync("username");
+        await AuthStateProvider.GetAuthenticationStateAsync();
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthStateProvider { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICategoryService CategoryService { get; set; }
     }
 }

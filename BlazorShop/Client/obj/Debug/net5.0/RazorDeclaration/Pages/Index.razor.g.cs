@@ -131,6 +131,13 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/{categoryurl}")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
@@ -141,7 +148,7 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Index.razor"
+#line 27 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Index.razor"
       
 
     [Parameter]
@@ -166,6 +173,7 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISyncLocalStorageService LocalStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ICategoryService CategoryService { get; set; }
     }

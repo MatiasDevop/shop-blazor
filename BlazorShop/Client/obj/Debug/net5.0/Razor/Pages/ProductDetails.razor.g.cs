@@ -128,6 +128,13 @@ using Blazored.Toast.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 18 "D:\Blazor\BlazorShop\BlazorShop\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/product/{id:int}")]
     public partial class ProductDetails : Microsoft.AspNetCore.Components.ComponentBase
     {
