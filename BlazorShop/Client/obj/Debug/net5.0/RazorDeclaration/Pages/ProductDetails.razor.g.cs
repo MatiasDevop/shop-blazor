@@ -154,7 +154,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
+#line 44 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
        
 
     private Product product = new Product();

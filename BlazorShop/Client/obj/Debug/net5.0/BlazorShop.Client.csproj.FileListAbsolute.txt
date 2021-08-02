@@ -657,3 +657,4 @@ D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\WS245aMK.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\jNAlRRXl.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\05QNzDjH.gz
 D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\build-gz\5NJxfgMM.gz
+D:\Blazor\BlazorShop\BlazorShop\Client\obj\Debug\net5.0\scopedcss\Pages\ProductDetails.razor.rz.scp.css
