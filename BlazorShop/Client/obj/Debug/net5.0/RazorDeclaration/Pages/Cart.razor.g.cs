@@ -154,9 +154,10 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Cart.razor"
+#line 65 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\Cart.razor"
        
     List<CartItem> cartItems = new List<CartItem>();
+    bool orderPlaced = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -167,6 +168,12 @@ using Microsoft.AspNetCore.Components.Authorization;
     {
         await CartService.DeleteItem(item);
         cartItems = await CartService.GetCartItems();
+    }
+
+    private async Task PlaceOrder()
+    {
+        orderPlaced = true;
+        await CartService.EmptyCart();
     }
 
 #line default

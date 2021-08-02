@@ -154,12 +154,14 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
+#line 48 "D:\Blazor\BlazorShop\BlazorShop\Client\Pages\ProductDetails.razor"
        
 
     private Product product = new Product();
 
     private int currentEditionId = 1;
+
+    private CartItem cartItem = new CartItem { Quantity = 1 };
 
     [Parameter]
     public int Id { get; set; }
@@ -182,7 +184,28 @@ using Microsoft.AspNetCore.Components.Authorization;
 
     private async Task AddToCart()
     {
-        await CartService.AddToCart(GetSelectedVariant());
+        var productVariant = GetSelectedVariant();
+
+        cartItem.EditionId = productVariant.EditionId;
+        cartItem.EditionName = productVariant.Edition.Name;
+        cartItem.Image = product.Image;
+        cartItem.Price = productVariant.Price;
+        cartItem.ProductId = productVariant.ProductId;
+        cartItem.ProductTitle = product.Title;
+
+        await CartService.AddToCart(cartItem);
+    }
+
+    private string GetViewsString()
+    {
+        if (product.Views > 1000000)
+            return $"{((float)product.Views / 1000000).ToString("#.##")}M";
+        if (product.Views > 100000)
+            return $"{((float)product.Views / 1000).ToString("#")}K";
+        if (product.Views > 1000)
+            return $"{((float)product.Views / 1000).ToString("#.##")}K";
+
+        return product.Views.ToString("0##");
     }
 
 #line default
